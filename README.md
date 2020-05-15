@@ -43,7 +43,6 @@ Things you may want to cover:
 |------|----|-------|
 |name|stirng|null: false|
 ### Association
-- belongs_to :user
 - has_many :group_users
 - has_many :users, throuth: :group_users
 
@@ -52,8 +51,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|null: false, foreign_key: true|
-|group_id|references|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
@@ -65,8 +64,8 @@ Things you may want to cover:
 |------|----|-------|
 |image|string||
 |message|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
