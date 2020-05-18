@@ -45,6 +45,7 @@ Things you may want to cover:
 ### Association
 - has_many :group_users
 - has_many :users, throuth: :group_users
+- has_many :messages
 
 
 ## group_usersテーブル
@@ -63,7 +64,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |image|string||
-|message|text|null: false|
+|text|text||
 |user|references|null: false, foreign_key: true|
 |group|references|null: false, foreign_key: true|
 ### Association
