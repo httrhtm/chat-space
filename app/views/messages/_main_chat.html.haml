@@ -1,0 +1,30 @@
+.chat-main
+  .main-header
+    .main-header__left-box
+      %h1.main-header__left-box__current-group techcamp
+      %ul.main-header__left-box__member-list
+        %p.text Member：
+        %li.main-header__left-box__member-list__member httr
+    %a{ href: "#",  class: "main-header__edit-btn"}  Edit
+
+  .messages
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker httr
+        %p.message__upper-info__date 2020/05/25(Mon)14:35:14
+      %p.message__text hello!
+
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker httr
+        %p.message__upper-info__date 2020/05/25(Mon)14:35:14
+      %p.message__text hello!
+      
+  .form
+    %form.new_message
+      .input-box
+        %input{type: "text", class: "input-box__text",  placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon("far", "image")
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn"}

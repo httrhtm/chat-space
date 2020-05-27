@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+$skyblue: #38aef0;
+$white: #ffffff;
+$black: #333333;
+$sand: #999999;
+
+
+.chat-side {
+  height: 100%;
+  width: 300px;
+  background-color: #253141;
+  position: absolute;
+  .side-header {
+    height: 100px;
+    background-color: #253141;
+    display: flex;
+    align-items: center;
+
+    &__box {
+      height: 20px;
+      width: 260px;
+      margin: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      line-height: 20px;
+      &__user-name {
+        color: $white;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      ul {
+        width: 60px;
+        display: flex;
+        list-style: none;
+        margin-right: 0;
+        a {
+          color: $white;
+          text-decoration: none;
+        }
+        i {
+          display: inline-block;
+          padding-left: 5px;
+        }
+        .new-group__icon:before {
+          content: '\f044';
+          font-weight: 400;
+          font-family: "Font Awesome 5 Free";
+        }
+        .edit-user__icon:before {
+          content: '\f013';
+          font-weight: 400;
+          font-family: "Font Awesome 5 Free";
+        }
+      }
+    }
+  }
+  .group-list {
+    height: calc(100vh - 100px);
+    width: 300px;
+    background-color: #2f3e51;
+    padding: 20px;
+    padding-bottom: 0 ;
+    .group__box {
+      height: 45px;
+      margin-bottom: 40px;
+      &__name {
+        height: 23px;
+        font-size: 15px;
+        color: $white;
+        margin-bottom: 5px; 
+      }
+      &__message {
+        height: 17px;
+        font-size: 11px;
+        color: $white;
+      }
+    }
+  }
+}
+
+.chat-main {
+  height: 100%;
+  width: calc(100vw - 300px);
+  background-color: $white;
+  float: right;
+  .main-header {
+    height: 100px;
+    padding: 0 40px;
+    background-color: $white;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    &__left-box {
+      height: 65px;
+      width: 100px;
+      margin-top: 35px;
+      &__current-group {
+        height: 27px;
+        font-size: 20px;
+        color:  $black;
+        margin-bottom: 15px;
+      }
+      &__member-list {
+        height: 15px;
+        list-style: none;
+        display: flex;
+        .text {
+          color: $sand;
+          font-size: 12px;
+        }
+        &__member {
+          color: $sand;
+          font-size: 12px;
+        }
+      }
+    }
+    &__edit-btn {
+      height: 40px;
+      width: 72px;
+      padding: 0 20px;
+      margin-top: 28px;
+      font-size: 16px;
+      color: $skyblue;
+      border: 1px solid $skyblue;
+      text-decoration: none;
+      line-height: 40px;
+    }
+  }
+  .messages {
+    height: calc(100vh - 190px);
+    width: 100%;
+    background-color: #fafafa;
+    padding: 35px 40px;
+    .message {
+      height: 105px;
+      padding-bottom: 46px;
+      &__upper-info {
+        height: 24px;
+        margin-bottom: 12px;
+        display: flex;
+        justify-content: flex-start;
+        &__talker {
+          height: 24px;
+          width: 35px;
+          font-size: 16px;
+          color:$black;
+          font-weight: bold;
+          margin-right: 10px;
+        }
+        &__date {
+          display: inline;
+          font-size: 12px;
+          color: $sand;
+        }
+      }
+      &__text {
+        height: 21px;
+        font-size: 14px;
+        color: #434a54;
+      }
+    }
+  }
+
+  .form {
+    height: 90px;
+    width: 100%;
+    background-color: #d2d2d2;
+    padding: 20px 40px;
+    form {
+      display: flex;
+      .input-box {
+        display: flex;
+        width: 100%;
+        position: relative;
+        &__text {
+          height: 50px;
+          width: 100%;
+          color: #434a54;
+          border-style: none;
+          padding: 0 40px 0 10px;
+        }
+        &__image {
+          position: absolute;
+          top: 10px;
+          right: 30px;
+          cursor: pointer;
+          font-size: 1.3rem;
+          width: 0px;
+          &__file {
+            display: none;
+          }
+        }
+      }
+      .submit-btn {
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: $skyblue;
+        color: $white;
+        cursor: pointer;
+      }
+    }
+  }
+}
