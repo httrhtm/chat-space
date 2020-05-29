@@ -70,3 +70,5 @@ gem 'font-awesome-sass'
 gem 'devise'
 
 gem 'rails-i18n'
+
+gem 'pry-rails'
