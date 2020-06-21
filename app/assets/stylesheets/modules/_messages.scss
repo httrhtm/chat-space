@@ -32,7 +32,6 @@ $sand: #999999;
         font-weight: bold;
       }
       ul {
-        width: 60px;
         display: flex;
         list-style: none;
         margin-right: 0;
@@ -141,7 +140,6 @@ $sand: #999999;
         display: flex;
         justify-content: flex-start;
         &__talker {
-          width: 35px;
           font-size: 16px;
           color:$black;
           font-weight: bold;
